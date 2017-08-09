@@ -273,8 +273,8 @@ class ProfileController extends Controller
             if(Input::get('new_password') == Input::get('new_password_confirmed'))
             {
                 //Auth::user()->update(['password', Hash::make(Input::get('new_password'))]);
-                $user_id = Auth::User()->id;
-                $obj_user = User::find(Auth::id());
+                $user_id = Auth::User()->id; 
+                $obj_user = User::find($user_id);
                 $obj_user->password = Hash::make(Input::get('new_password'));;
                 $obj_user->save();
                 return redirect()->back()->with('success', 'Your password was changed!');
