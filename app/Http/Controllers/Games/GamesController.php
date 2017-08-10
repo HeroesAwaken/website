@@ -87,7 +87,7 @@ class GamesController extends BaseController
             $game[$stat->statsKey] = $stat;
         }
 
-        $uniqueplayers = GameServerPlayerStats::distinct()->select(['pid', 'gid'])->where('gid', $gid)->get();
+        $uniqueplayers = GameServerPlayerStats::distinct()->select(['pid', 'gid'])->where('gid', $gid)->whereRaw('updated_at BETWEEN NOW() - INTERVAL 2 MINUTE AND NOW()')->get();
 
         $activeplayers = [];
         foreach ($uniqueplayers as $player)
@@ -120,17 +120,12 @@ class GamesController extends BaseController
         $playersByTeam = ['team1' => [], 'team2' => []];
         foreach ($activeplayers as $pid => $player)
         {
-            if ($player['GID'] !== $gid)
+            if ($player['GID'] != $gid)
             {
                 continue;
             }
 
             if (!isset($player['P-team']))
-            {
-                continue;
-            }
-
-            if ((time() - $player['updated_at']) > 120)
             {
                 continue;
             }
