@@ -53,7 +53,7 @@
                         <tr>
                             <td style="width:75%">
                                 <p style="margin-bottom: 0rem;">
-                                    <a href="/games/{{ $gid }}">
+                                    <a href="/games/{{ $game['GID']->statsValue }}">
                                         {{ $game['NAME']->statsValue }}
                                     </a>
                                 </p>
