@@ -92,7 +92,7 @@ class GamesController extends BaseController
         $activeplayers = [];
         foreach ($uniqueplayers as $player)
         {
-            $stats = GameServerPlayerStats::where('pid', $player->pid)->get();
+            $stats = GameServerPlayerStats::where('pid', $player->pid)->where('gid', $gid)->get();
             $pl = [];
             $pl['GID'] = $player->gid;
             foreach ($stats as $stat) {
