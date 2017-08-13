@@ -87,6 +87,11 @@ class GamesController extends BaseController
             $game[$stat->statsKey] = $stat;
         }
 
+        if (isset($game['NAME']))
+        {
+            $game['NAME']->statsValue = preg_replace("/\([^)]+\)/","",$gamepl['NAME']->statsValue);
+        }
+
         $uniqueplayers = GameServerPlayerStats::distinct()->select(['pid', 'gid'])->where('gid', $gid)->whereRaw('updated_at BETWEEN NOW() - INTERVAL 2 MINUTE AND NOW()')->get();
 
         $activeplayers = [];
@@ -110,10 +115,6 @@ class GamesController extends BaseController
                 {
                         $pl['updated_at'] = $best_time;
                 }
-            }
-            if (isset($pl['NAME']))
-            {
-                $pl['NAME']->statsValue = preg_replace("/\([^)]+\)/","",$pl['NAME']->statsValue);
             }
             $hero = GameHeroes::where('id', $player->pid)->first();
             $pl['hero'] = $hero;
