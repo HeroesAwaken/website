@@ -110,6 +110,10 @@ class GamesController extends BaseController
                 {
                         $pl['updated_at'] = $best_time;
                 }
+                if (isset($pl['NAME']))
+                {
+                    $pl['NAME']->statsValue = preg_replace("/\([^)]+\)/","",$pl['NAME']->statsValue);
+                }
             }
             $hero = GameHeroes::where('id', $player->pid)->first();
             $pl['hero'] = $hero;
