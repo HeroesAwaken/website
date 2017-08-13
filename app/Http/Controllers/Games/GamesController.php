@@ -89,7 +89,7 @@ class GamesController extends BaseController
 
         if (isset($game['NAME']))
         {
-            $game['NAME']->statsValue = preg_replace("/\([^)]+\)/","",$gamepl['NAME']->statsValue);
+            $game['NAME']->statsValue = preg_replace("/\([^)]+\)/","",$game['NAME']->statsValue);
         }
 
         $uniqueplayers = GameServerPlayerStats::distinct()->select(['pid', 'gid'])->where('gid', $gid)->whereRaw('updated_at BETWEEN NOW() - INTERVAL 2 MINUTE AND NOW()')->get();
