@@ -221,7 +221,7 @@
                                 </form>
                             </div>
                             <div class="large-8 columns">
-                                {!! Auth::user()->description !!}
+                                {{ Auth::user()->description }}
                             </div>
                         </div>
                     </div>

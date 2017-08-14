@@ -67,7 +67,7 @@
                                     <tr>
                                         <td>{{ $comment->post->name }}</td>
                                         <td>{{ $comment->created_at->format('m/d/Y') }}</td>
-                                        <td>{!! substr($comment->comment, 0, 50) !!}</td>
+                                        <td>{{ substr($comment->comment, 0, 50) }}</td>
                                         <td><a style="cursor: pointer;" class="label radius success" href="{{ route('forums.posts', [$comment->post->forum_id, $comment->topic_id]) }}#{{ $comment->id }}"><i class="fa fa-info"></i> Details</a></td>
                                     </tr>
                                 @endforeach

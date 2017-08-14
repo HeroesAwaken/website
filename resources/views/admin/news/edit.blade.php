@@ -27,7 +27,7 @@
                     </label>
 
                     <label> <b style="color: black;">Write your news post</b>
-                        <textarea name="text" id="editor1" rows="5" cols="40" placeholder="Write your post here..." required>{!! $news->text !!}</textarea>
+                        <textarea name="text" id="editor1" rows="5" cols="40" placeholder="Write your post here..." required>{{ $news->text }}</textarea>
                     </label>
                     <br>
                     <button type="submit" class="lime-button" name="submit" style="float: right;">Update news post</button>

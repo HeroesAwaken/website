@@ -76,7 +76,7 @@
 								</span>
 							</div>
 							<div class="content">
-								{!! $topic->text !!}
+								{{ $topic->text }}
 							</div>
 							@if(\App\User::find($topic->user_id)->signature != null)
 								<hr>
@@ -154,7 +154,7 @@
 									</span>
 								</div>
 								<div class="content">
-									{!! $comment->comment !!}
+									{{ $comment->comment }}
 									@if($comment->author->signature != null)
 										<hr>
 										<div data-type="user-signature">

@@ -33,7 +33,11 @@
                 <!-- Numbers of posts / Comments -->
 
                 <h3>Description</h3>
-                {!! $user->description != null ? $user->description : 'This soldier has no description yet!' !!}
+                @if($user->description != null)
+                    <p>{{ $user->description }}</p>
+                @else
+                    <p>This soldier has no description yet!</p>
+                @endif
 
             </div>
             @if($user->signature != null)
