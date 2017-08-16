@@ -155,14 +155,13 @@
                             <img src="{{ asset('images/blocked_sadface.png') }}" alt="sadface"/>
                         </div>
                         <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-                        <!-- FooterAd -->
                         <ins class="adsbygoogle"
                             style="display:block"
+                            data-ad-format="autorelaxed"
                             data-ad-client="ca-pub-8715450313943907"
-                            data-ad-slot="5593939078"
-                            data-ad-format="auto"></ins>
+                            data-ad-slot="3703932528"></ins>
                         <script>
-                        (adsbygoogle = window.adsbygoogle || []).push({});
+                            (adsbygoogle = window.adsbygoogle || []).push({});
                         </script>
                     </dd>
                 </dl>
