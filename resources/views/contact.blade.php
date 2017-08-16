@@ -19,7 +19,7 @@
             <div class="small-16 large-8 columns">
                 <h4>@lang('contact.how_to')</h4>
                 <p>@lang('contact.how_to_description')</p>
-                <p>You can contact MakaHost via makahost@heroesawaken.com. In case secure communication is preffered, <a href="{{ asset('images/makahost.pgp.txt') }}">a PGP Public Key is available</a></p>
+                <p>You can contact us via <a href="mailto:support@heroesawaken.com">support@heroesawaken.com</a>. In case secure communication is preffered, <a href="{{ asset('images/support.pgp.txt') }}">a PGP Public Key is available</a></p>
             </div>
             <div class="small-16 large-7 columns">
                 <div class="row small-up-1 medium-up-2">
