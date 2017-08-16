@@ -1,5 +1,7 @@
 @extends('partials.layout')
 
+@section('pageTitle', 'Games - ')
+
 @section('content')
 
     @include('partials.inner_slider')

@@ -1,5 +1,7 @@
 @extends('partials.layout')
 
+@section('pageTitle', 'Create a Hero - ')
+
 @section('content')
 
     @include('partials.inner_slider')

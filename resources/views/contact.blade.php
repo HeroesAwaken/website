@@ -1,5 +1,7 @@
 @extends('partials.layout')
 
+@section('pageTitle', 'Contact - ')
+
 @section('content')
 
     @include('partials.inner_slider')

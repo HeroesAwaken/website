@@ -1,5 +1,7 @@
 @extends('partials.layout')
 
+@section('pageTitle', $user->username.' - ')
+
 @section('content')
 
     @include('partials.inner_slider')

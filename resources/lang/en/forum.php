@@ -20,8 +20,8 @@ return [
     'general' => 'General',
     'general_description' => 'Discuss about anything that\'s HeroesAwaken related that doesn\'t fit in the other categories.',
 
-    'off_topic' => 'Off-topic',
-    'off_topic_description' => 'Discuss non-HeroesAwaken topics in here.',
+    'off-topic' => 'Off-topic',
+    'off-topic_description' => 'Discuss non-HeroesAwaken topics in here.',
 
     'recruits' => 'Recruits',
     'recruits_description' => 'Do you want to offer your service?',

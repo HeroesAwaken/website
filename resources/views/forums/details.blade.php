@@ -1,5 +1,7 @@
 @extends('partials.layout')
 
+@section('pageTitle', trans('forum.' . strtolower($forum->name)).' - ')
+
 @section('content')
 
     @include('partials.inner_slider')

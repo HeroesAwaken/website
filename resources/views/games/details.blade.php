@@ -1,5 +1,7 @@
 @extends('partials.layout')
 
+@section('pageTitle', $game['NAME']->statsValue.' - ')
+
 @section('content')
 
     @include('partials.inner_slider')
