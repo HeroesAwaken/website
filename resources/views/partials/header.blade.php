@@ -7,7 +7,7 @@
     <title>@yield('pageTitle')HeroesAwaken</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Luckiest+Guy|Bitter:700|Open+Sans:400,600,600italic">
     <link href="{{ asset('/css/app.css') }}?v1" rel="stylesheet"/>
-    <link rel="stylesheet" href="{{ asset('css/style.css') }}?v47">
+    <link rel="stylesheet" href="{{ asset('css/style.css') }}?v48">
     <link rel="stylesheet" href="{{ asset('css/font-awesome.min.css') }}">
     @yield('styles')
 
