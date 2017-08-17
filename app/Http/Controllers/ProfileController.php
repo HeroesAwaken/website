@@ -293,7 +293,7 @@ class ProfileController extends Controller
         elseif(can('game.multipleheroes'))
             $heroesAllowed = 6;
         else
-            $heroesAllowed = 1;
+            $heroesAllowed = 2;
 
         if(GameHeroes::where('user_id', Auth::id())->count() >= $heroesAllowed)
             return redirect()->route('home')->with('error', 'You have reached the limit of ' . $heroesAllowed . ' heroes per account!');
@@ -308,7 +308,7 @@ class ProfileController extends Controller
         elseif(can('game.multipleheroes'))
             $heroesAllowed = 6;
         else
-            $heroesAllowed = 1;
+            $heroesAllowed = 2;
 
         if(GameHeroes::where('user_id', Auth::id())->count() >= $heroesAllowed)
             return redirect()->route('home')->with('error', 'You have reached the limit of ' . $heroesAllowed . ' heroes per account!');
