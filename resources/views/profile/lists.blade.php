@@ -8,14 +8,14 @@
 
     <div class="content-top"></div>
 
-    <section id="main-content">
+    <section id="main-content" class="profile-edit">
         <div class="row">
             <div class="small-16 columns">
                 <h1>{{ Auth::user()->username }}</h1>
                 <div class="big-sep"></div>
             </div>
         </div>
-        <div class="row collapse">
+        <div class="row">
             <div class="small-2 columns">
                 <ul id="admin-actions-tab" class="tabs vertical">
                     @if(\App\can('game.createhero'))
@@ -117,7 +117,7 @@
                         <div style="margin-top: 10px;">
                             <div style="width: 120px; height: 58px; font-size: 12px;">
                                 <a href="https://discord.com" target="_blank" style="color: #777;">
-                                    <img src="/images/links/discord.png" />
+                                    <img src="{{ asset('images/links/discord.png') }}" />
                                     <span style="padding-left: 18px;">
                                         www.discord.com
                                     </span>
@@ -143,7 +143,7 @@
                         <div style="margin-top: 10px;">
                             <div style="width: 120px; height: 58px; font-size: 12px;">
                                 <a href="https://battlelog.co" target="_blank" style="padding-top: 8px; color: #777;">
-                                    <img src="/images/links/revive.png" />
+                                    <img src="{{ asset('images/links/revive.png') }}" />
                                     <span style="padding-left: 18px;">
                                         www.battlelog.co
                                     </span>
