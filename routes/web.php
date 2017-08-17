@@ -198,6 +198,18 @@ Route::group(['prefix' => 'games', 'as' => 'games.', 'namespace' => 'Games'], fu
         'uses' => 'GamesController@list',
     ]);
 
+    Route::get('launcher', [
+        'as'    => 'game.launcher',
+        'uses' => 'GamesController@listLauncher',
+    ]);
+
+    Route::post('launcher', [
+        'as'    => 'game.launcher',
+        'middleware' => ['auth', 'acl'],
+        'can'  => 'game.matchmake',
+        'uses' => 'GamesController@listLauncher',
+    ]);
+
     Route::get('{gameid}', [
         'as' => 'game.details',
         'uses' => 'GamesController@details',

@@ -18,6 +18,67 @@ date_default_timezone_set("UTC");
 class GamesController extends BaseController
 {
 
+    public function listLauncher(Request $req)
+    {
+
+        if ($req->isMethod('post'))
+        {
+            $region = $req->input('region', 'AUTO');
+
+            if ($region == 'AUTO')
+            {
+                DB::delete('DELETE FROM game_player_regions WHERE userid=?', [Auth::id()]);
+            }
+            else
+            {
+                DB::statement('INSERT INTO game_player_regions (userid, region, created_at, updated_at)
+                VALUES (?, ?, NOW(), NOW()) ON DUPLICATE KEY UPDATE region=?, updated_at=NOW()', [Auth::id(), $region, $region]);
+            }
+            return redirect('/games/launcher');
+        }
+
+        $region = DB::select('SELECT region FROM game_player_regions WHERE userid = ?', [Auth::id()]);
+        $selectedregion = '';
+        if (count($region) > 0)
+        {
+            $selectedregion = $region[0]->region;
+        }
+        //$region
+
+        $uniquegames = GameServerStats::distinct()->select('gid')->get();
+
+        $activegames = [];
+
+        foreach ($uniquegames as $game) {
+            $stats = GameServerStats::where('gid', $game->gid)->get();
+            $gameData = [];
+            foreach ($stats as $stat) {
+                $gameData[$stat->statsKey] = $stat;
+                if ($stat->statsKey == 'B-U-server_ip')
+                {
+                    $gameData['geoip'] = geoip($stat->statsValue);
+                }
+            }
+
+            if (isset($gameData['geoip']) && isset($gameData['NAME']))
+            {
+                $gameData['NAME']->statsValue = preg_replace("/\([^)]+\)/","",$gameData['NAME']->statsValue);
+                $activegames[$game->gid] = $gameData;
+            }
+        }
+
+        usort($activegames, function($a, $b) {
+            if ($a === $b) return 0;
+
+            if (floatval($a['B-U-percent_full']->statsValue) > floatval($b['B-U-percent_full']->statsValue))
+                return -1;
+            else
+                return 1;
+        });
+
+        return view('games.listLauncher', compact('activegames', 'selectedregion'));
+    }
+
     public function list(Request $req)
     {
 
