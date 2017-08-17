@@ -69,7 +69,7 @@
                                                 <div class="info-content col-lg-11">
                                                     <div class="col-lg-4 col-xs-4 hero-team team-{{ $hero->getTeam() }}"><span>{{ $hero->getTeam() }}</span></div>
                                                     <div class="col-lg-4 col-xs-4 hero-class class-{{ $hero->getClass() }}"><span>{{ $hero->getClass() }}</span></div>
-                                                    <div class="col-lg-4 col-xs-4 hero-level level-{{ $hero->getStat('level') }}"><span>level</span></div>
+                                                    <div class="col-lg-4 col-xs-4 hero-level level-{{ (int) $hero->getStat('level') }}"><span>level</span></div>
                                                 </div>
                                             </div>
                                         </div>

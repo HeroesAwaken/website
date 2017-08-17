@@ -1476,7 +1476,7 @@ button {
 
 /* line 103, ../../foundation/bower_components/foundation-sites/scss/grid/_classes.scss */
 .small-offset-0 {
-    margin-left: 0%;
+    margin-left: 0;
 }
 
 /* line 85, ../../foundation/bower_components/foundation-sites/scss/grid/_classes.scss */
@@ -1959,7 +1959,7 @@ button {
 
     /* line 103, ../../foundation/bower_components/foundation-sites/scss/grid/_classes.scss */
     .medium-offset-0 {
-        margin-left: 0%;
+        margin-left: 0;
     }
 
     /* line 85, ../../foundation/bower_components/foundation-sites/scss/grid/_classes.scss */
@@ -2442,7 +2442,7 @@ button {
 
     /* line 103, ../../foundation/bower_components/foundation-sites/scss/grid/_classes.scss */
     .large-offset-0 {
-        margin-left: 0%;
+        margin-left: 0;
     }
 
     /* line 85, ../../foundation/bower_components/foundation-sites/scss/grid/_classes.scss */
@@ -3551,7 +3551,6 @@ p + .stat {
 /* line 154, ../../foundation/bower_components/foundation-sites/scss/components/_button.scss */
 .button.dropdown::after {
     content: '';
-    display: block;
     width: 0;
     height: 0;
     border: inset 0.4em;
