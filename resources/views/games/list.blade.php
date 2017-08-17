@@ -24,11 +24,11 @@
         <div class="row">
 
 
-            <div class="small-16 columns" style="background-color: rgba(255, 255, 255, 0.15); padding-top:1rem;">
+            <div class="small-16 columns" style="background-color: rgba(255, 255, 255, 0.15); padding-top:1rem; padding-bottom:1rem; ">
                 <form method="POST" action="/games/launcher">
                     {{ csrf_field() }}
                     <div class="small-8 columns">
-                        <select name="region">
+                        <select name="region" style="margin: 0 0 0; margin-bottom: 0rem;">
                             <option value="AUTO" {{ ($selectedregion == '') ? 'selected' : '' }}>Automatic</option>
                             <option value="EU" {{ ($selectedregion == 'EU') ? 'selected' : '' }}>Europe</option>
                             <option value="NA" {{ ($selectedregion == 'NA') ? 'selected' : '' }}>North America</option>
