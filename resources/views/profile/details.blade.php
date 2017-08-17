@@ -105,8 +105,10 @@
                 <!-- Numbers of posts / Comments -->
             </div>
             @if($user->signature != null)
-                <div class="large-16 columns">
-                    <img src="{{ $user->signature->image }}">
+                <div class="row" style="padding: 1rem;">
+                    <div class="large-8 columns">
+                        <img src="{{ $user->signature->image }}">
+                    </div>
                 </div>
             @endif
         </div>
