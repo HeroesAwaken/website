@@ -8115,8 +8115,10 @@ a:hover {
     border: none;
 }
 
-.pagination .active span, .pagination .active span:hover {
+.pagination .active span, .pagination .active span:hover,
+.pagination .disabled span, .pagination .disabled span:hover {
     background-color: transparent;
     border: none;
     padding: 0px;
+    color: #fff;
 }
