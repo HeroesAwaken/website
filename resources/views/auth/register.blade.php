@@ -21,16 +21,25 @@
             <div class="small-16 large-8 columns">
                 <form method="POST" action="{{ url('register') }}">
                     {{ csrf_field() }}
+                    @if ($errors->any())
+                        <div class="alert alert-danger">
+                            <ul>
+                                @foreach ($errors->all() as $error)
+                                    <li>{{ $error }}</li>
+                                @endforeach
+                            </ul>
+                        </div>
+                    @endif
                     <label> Username
-                        <input type="text" name="username" required>
+                        <input type="text" name="username" value="{{ old('username') }}" required>
                     </label>
 
                     <label> Email
-                        <input type="email" name="email" required>
+                        <input type="email" name="email" value="{{ old('email') }}" required>
                     </label>
 
                     <label> Birthday
-                        <input id="date" type="text" name="birthday" required>
+                        <input id="date" type="text" name="birthday" value="{{ old('birthday') }}" required>
                     </label>
 
                     <label> Password

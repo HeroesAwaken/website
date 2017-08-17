@@ -7821,3 +7821,280 @@ table td, table th {
 .callout-secondary {
     background-color: #E2D3C0;
 }
+
+.profile {
+    margin-bottom: 5rem;
+}
+
+.profile .content-header {
+    background: #532929;
+    padding-left: 5px;
+    text-align: center;
+}
+
+.profile .content {
+    margin-top: -8px;
+    color: #333;
+    overflow: auto;
+    padding: 15px 5px;
+}
+
+.hero {
+    left: 50%;
+    transform: translateX(-50%);
+    margin: 15px 0 15px 0;
+}
+
+.hero .hero-content {
+    background-color: #8ab15f;
+    width: 100%;
+    height: 79px;
+    border-radius: 10px 0 0 10px;
+}
+
+.hero-content .name {
+    padding-left: 10px;
+}
+
+.hero-content .info {
+    background-color: #f4ebe0;
+    height: 58px;
+    line-height: 58px;
+    padding-left: 80px;
+    border-radius: 10px 0 0 10px;
+}
+
+.hero-content .info-content {
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.hero-content .info-content div {
+    text-transform: capitalize;
+}
+
+.hero-content .info-content div:before {
+    content: '';
+    background: url('../images/herocreator/sprite-user-profile.png') no-repeat;
+    width: 32px;
+    height: 32px;
+    display: inline-block;
+    margin: 0 5px -10px 0;
+}
+
+.hero-content .info-content div.hero-team.team-royal:before {
+    background-position: -460px 0;
+}
+.hero-content .info-content div.hero-team.team-national:before {
+    background-position: -420px 0;
+}
+.hero-content .info-content div.hero-class.class-soldier:before {
+    background-position: -380px 0;
+}
+.hero-content .info-content div.hero-class.class-gunner:before {
+    background-position: -340px 0;
+}
+.hero-content .info-content div.hero-class.class-commando:before {
+    background-position: -300px 0;
+}
+.hero-content .info-content div.hero-level.level-1:before {
+    background-position: -500px 0;
+}
+.hero-content .info-content div.hero-level.level-2:before {
+    background-position: -540px 0;
+}
+
+.hero-content .info-content div.hero-level.level-3:before {
+    background-position: -580px 0;
+}
+
+.hero-content .info-content div.hero-level.level-4:before {
+    background-position: -620px 0;
+}
+
+.hero-content .info-content div.hero-level.level-5:before {
+    background-position: -660px 0;
+}
+
+.hero-content .info-content div.hero-level.level-6:before {
+    background-position: -700px 0;
+}
+
+.hero-content .info-content div.hero-level.level-7:before {
+    background-position: -740px 0;
+}
+
+.hero-content .info-content div.hero-level.level-8:before {
+    background-position: -780px 0;
+}
+
+.hero-content .info-content div.hero-level.level-9:before {
+    background-position: -820px 0;
+}
+
+.hero-content .info-content div.hero-level.level-10:before {
+    background-position: -860px 0;
+}
+
+.hero-content .info-content div.hero-level.level-11:before {
+    background-position: -900px 0;
+}
+
+.hero-content .info-content div.hero-level.level-12:before {
+    background-position: -940px 0;
+}
+
+.hero-content .info-content div.hero-level.level-13:before {
+    background-position: -980px 0;
+}
+
+.hero-content .info-content div.hero-level.level-14:before {
+    background-position: -1020px 0;
+}
+
+.hero-content .info-content div.hero-level.level-15:before {
+    background-position: -1060px 0;
+}
+
+.hero-content .info-content div.hero-level.level-16:before {
+    background-position: -1100px 0;
+}
+
+.hero-content .info-content div.hero-level.level-17:before {
+    background-position: -1140px 0;
+}
+
+.hero-content .info-content div.hero-level.level-18:before {
+    background-position: -1180px 0;
+}
+
+.hero-content .info-content div.hero-level.level-19:before {
+    background-position: -1220px 0;
+}
+
+.hero-content .info-content div.hero-level.level-20:before {
+    background-position: -1260px 0;
+}
+
+.hero-content .info-content div.hero-level.level-21:before {
+    background-position: -1300px 0;
+}
+
+.hero-content .info-content div.hero-level.level-22:before {
+    background-position: -1340px 0;
+}
+
+.hero-content .info-content div.hero-level.level-23:before {
+    background-position: -1380px 0;
+}
+
+.hero-content .info-content div.hero-level.level-24:before {
+    background-position: -1420px 0;
+}
+
+.hero-content .info-content div.hero-level.level-25:before {
+    background-position: -1460px 0;
+}
+
+.hero-content .info-content div.hero-level.level-26:before {
+    background-position: -1500px 0;
+}
+
+.hero-content .info-content div.hero-level.level-27:before {
+    background-position: -1540px 0;
+}
+
+.hero-content .info-content div.hero-level.level-28:before {
+    background-position: -1580px 0;
+}
+
+.hero-content .info-content div.hero-level.level-29:before {
+    background-position: -1620px 0;
+}
+
+.hero-content .info-content div.hero-level.level-30:before {
+    background-position: -1660px 0;
+}
+.hero-content:after {
+    content: '';
+    width: 15px;
+    height: 21px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    padding-left: 1px;
+    border-style: solid;
+    border-width: 21px 15px 0 0;
+    border-color: #8ab15f transparent transparent transparent;
+}
+
+.hero .hero-image {
+    min-height: 79px;
+    float: left;
+    border-radius: 7px;
+}
+
+.hero .hero-image span {
+    float: left;
+    height: 79px;
+    margin: 0;
+    width: 82px;
+    background-repeat: no-repeat;
+}
+
+.hero .hero-image.image-national {
+    background: url('../images/herocreator/bg_national.png') no-repeat -5px -5px;
+    background-size: 92px 88px;
+}
+
+.hero .hero-image.image-royal {
+    background: url('../images/herocreator/bg_royal.png') no-repeat -5px -5px;
+    background-size: 92px 88px;
+}
+
+.hero .hero-image .image-commando {
+    background-position: -166px bottom;
+}
+
+.hero .hero-image .image-gunner {
+    background-position: -83px bottom;
+}
+
+.hero .hero-image .image-soldier {
+    background-position: 0 bottom;
+}
+
+.container-stats .content {
+    text-align: center;
+}
+
+.container-desc {
+    float: right;
+    margin-top: 15px;
+}
+
+@media (max-width: 1200px) {
+    .profile .row div[class*='container-'] {
+        float: none;
+        margin: 15px 0;
+    }
+}
+
+@media (max-width: 620px){
+    .info-content div span {
+        display: none;
+    }
+}
+
+i.fa {
+    text-shadow: none;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+.profile-edit > .row > .columns {
+    margin: 0;
+    padding: 0;
+}
