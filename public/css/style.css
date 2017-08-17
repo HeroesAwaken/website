@@ -8097,3 +8097,26 @@ a:hover {
     margin: 0;
     padding: 0;
 }
+
+.pagination {
+    display: block;
+}
+
+.pagination li a:hover {
+    color: #fff;
+    background-color: #8ab15f;
+    border-radius: 3px;
+    border: none;
+}
+
+.pagination > li > a {
+    text-decoration: none;
+    background-color: transparent;
+    border: none;
+}
+
+.pagination .active span, .pagination .active span:hover {
+    background-color: transparent;
+    border: none;
+    padding: 0px;
+}
