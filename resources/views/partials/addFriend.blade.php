@@ -1,4 +1,4 @@
-@if(Auth::check() && $user_id != Auth::id())
+@if(Auth::check() && $user_id != Auth::id() && isset($user))
     @if(! Auth::user()->isFriend($user_id))
         @if(\App\FriendRequest::where('receiver', Auth::user()->id)->where('sender', $user_id)->exists())
             <a href="{{ route('profile.addFriend', $user_id) }}">Add Friend <i class="fa fa-user-plus"></i></a>
