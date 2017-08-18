@@ -166,28 +166,4 @@
 
         {{--</div>--}}
 
-
-        <div class="row">
-            <div class="card small-16 large-centered columns" style="text-align: center; margin-top:1rem; vertical-align:middle;">
-                <dl>
-                    <dt style="text-transform: uppercase;font-size: 0.73333rem;color: #271d21;">Advertisement</dt>
-                    <dd>
-                        <div id="FGus239aiSAGisa32s2" style="display: none;">
-                            <img src="{{ asset('images/blocked_sadface.png') }}" alt="sadface"/>
-                        </div>
-                        <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-                        <ins class="adsbygoogle"
-                             style="display:block"
-                             data-ad-format="autorelaxed"
-                             data-ad-client="ca-pub-8715450313943907"
-                             data-ad-slot="3703932528"></ins>
-                        <script>
-                             (adsbygoogle = window.adsbygoogle || []).push({});
-                        </script>
-                    </dd>
-                </dl>
-            </div>
-        </div>
-    </section>
-
 @endsection
