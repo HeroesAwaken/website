@@ -136,6 +136,12 @@ class User extends Authenticatable
         return $this->belongsToMany(Role::class);
     }
 
+    public function topRole()
+    {
+        $role = Role::where('user_id', $this->id)->orderBy('roles.priority', 'desc')->first();
+        return $role;
+    }
+
     #region Permissions and Roles
     public function canDo($perm = null)
     {

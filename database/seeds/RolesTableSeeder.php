@@ -20,30 +20,35 @@ class RolesTableSeeder extends Seeder
 
         $administrator = Role::updateOrCreate(
             ['title' => 'Administrator'],
-            ['slug'  => 'administrator']
+            ['slug'  => 'administrator'],
+            ['priority'  => 1000]
         );
         $administrator->permissions()->sync([1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 18]);
 
         $staff = Role::updateOrCreate(
             ['title' => 'Staff'],
-            ['slug'  => 'staff']
+            ['slug'  => 'staff'],
+            ['priority'  => 500]
         );
         $staff->permissions()->sync([6, 7, 8, 9, 10, 11, 17]);
 
         $moderator = Role::updateOrCreate(
             ['title' => 'Moderator'],
-            ['slug'  => 'moderator']
+            ['slug'  => 'moderator'],
+            ['priority'  => 400]
         );
         $moderator->permissions()->sync([6, 7, 8, 9, 10, 11, 17]);
 
         $leads = Role::updateOrCreate(
             ['title' => 'Awoken Lead'],
-            ['slug'  => 'awokenlead']
+            ['slug'  => 'awokenlead'],
+            ['priority'  => 900]
         );
 
         $dev = Role::updateOrCreate(
             ['title' => 'Awoken Dev'],
-            ['slug'  => 'awokendev']
+            ['slug'  => 'awokendev'],
+            ['priority'  => 450]
         );
     }
 }

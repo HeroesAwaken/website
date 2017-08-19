@@ -43,7 +43,7 @@
 							</div>
 							<div class="user-info">
 								<div class="tag">
-									{{ $topic->author->roles->last()->title }}
+									{{ $topic->author->roles()->orderBy('roles.priority', 'desc')->first()->title }}
 								</div>
 								<table class="stats">
 									<tbody>
@@ -108,7 +108,7 @@
 								</div>
 								<div class="user-info">
 									<div class="tag">
-                                        {{ $comment->author->roles->last()->title }}
+                                        {{ $comment->author->roles()->orderBy('roles.priority', 'desc')->first()->title }}
 									</div>
 									<table class="stats">
 										<tbody>
