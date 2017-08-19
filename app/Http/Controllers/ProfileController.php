@@ -165,10 +165,11 @@ class ProfileController extends Controller
             exit;
 
         } else {
-            $oldID = 0
+            $oldID = 0;
 
-            if(Auth::user()->discordLink != null){
-                $oldID = Auth::user()->discordLink->discord_id
+            if(Auth::user()->discordLink != null)
+            {
+                $oldID = Auth::user()->discordLink->discord_id;
             }
             
 
