@@ -165,6 +165,12 @@ class ProfileController extends Controller
             exit;
 
         } else {
+            $oldID = 0
+
+            if(Auth::user()->discordLink != null){
+                $oldID = Auth::user()->discordLink->discord_id
+            }
+            
 
             $token = $provider->getAccessToken('authorization_code', [
                 'code' => $_GET['code'],
@@ -193,6 +199,10 @@ class ProfileController extends Controller
             // 329078443687936001 = guildID of HeroesAwaken Discord
             $client = new \GuzzleHttp\Client();
             $res = $client->get('https://bot.heroesawaken.com/api/refresh/329078443687936001/' . $user->id);
+
+            if ($oldID != 0) {
+                $res = $client->get('https://bot.heroesawaken.com/api/refresh/329078443687936001/' . $oldID);
+            }
 
             return redirect()->route('profile.lists')->with('success', 'We linked your discord account!');
         }
