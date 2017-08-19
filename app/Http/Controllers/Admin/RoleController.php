@@ -17,7 +17,7 @@ class RoleController extends Controller
         $permissions = [];
         foreach(Permission::all() as $permission) {
             $parts = explode('.',$permission->slug);
-            $permissions[ucfirst($parts[0])][] = ['access'=> ucfirst($parts[1]), 'description'=>$permission->description];
+            $permissions[ucfirst($parts[0])][] = ['access'=> ucfirst($parts[1]), 'description'=>$permission->description, 'id'=>$permission->id];
         }
         return view('admin.users.roles.details', compact('role', 'permissions'));
     }

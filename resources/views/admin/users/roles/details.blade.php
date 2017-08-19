@@ -57,7 +57,17 @@
                                         <td>
                                             <label>{{ $access }} Permissions</label>
                                             @foreach($permission as $p)
-                                                <input id="{{ camel_case($access . $p['access']) }}" type="checkbox" name="permissions[{{ strtolower($access . '.' . $p['access']) }}]" @if($role->hasPermission(strtolower($access . '.' . $p['access']))) checked @endif><label for="{{ camel_case($access . $p['access']) }}"><span data-tooltip aria-haspopup="true" class="has-tip" title="{{ $p['description'] }}">{{ preg_replace('/(?<!\ )[A-Z]/', ' $0', $p['access']) }}</span></label>
+                                                <select id="{{ camel_case($access . $p['access']) }}" name="permissions[{{ strtolower($access . '.' . $p['access']) }}]">
+                                                <option value="-1">Default</option>
+                                                <option value="0" @if($role->hasPermission(strtolower($access . '.' . $p['access']))) selected @endif>Allow</option>
+                                                <option value="1">Disallow</option>
+                                                </select>
+                                                <input id="{{ camel_case($access . $p['access']) }}" type="checkbox" name="permissions[{{ strtolower($access . '.' . $p['access']) }}]" @if($role->hasPermission(strtolower($access . '.' . $p['access']))) checked @endif>
+                                                <label for="{{ camel_case($access . $p['access']) }}">
+                                                    <span data-tooltip aria-haspopup="true" class="has-tip" title="{{ $p['description'] }}">
+                                                        {{ preg_replace('/(?<!\ )[A-Z]/', ' $0', $p['access']) }}
+                                                    </span>
+                                                </label>
                                             @endforeach
                                         </td>
                                     </tr>

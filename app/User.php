@@ -159,10 +159,16 @@ class User extends Authenticatable
 
     public function checkPermission(Array $permissionArray = [])
     {
+        
+
         foreach($this->roles as $role)
             $permissions[] = $role->permissions->pluck('slug')->toArray();
+
+        
         $perms = array_unique(array_flatten($permissions));
         $perms = array_map('strtolower', $perms);
+
+
         return count(array_intersect($perms, $permissionArray)) == count($permissionArray);
     }
 
