@@ -111,7 +111,8 @@ class UserController extends Controller {
     public function doAddRole(User $user)
     {
         $validation = \Validator::make(Input::all(), [
-            'name' => 'required'
+            'name' => 'required',
+            'priority'  => 'required|integer',
         ]);
         if ($validation->fails())
             return \Redirect::to(\URL::previous())->withErrors($validation)->withInput();
@@ -119,6 +120,7 @@ class UserController extends Controller {
         $role = new Role;
         $role->title = ucfirst(Input::get('name'));
         $role->slug = strtolower(Input::get('name'));
+        $role->priority = Input::get('priority');
         $role->save();
         $role->permissions()->sync($permissions);
 

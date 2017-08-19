@@ -36,6 +36,9 @@
                                 <label>Slug of the role
                                     <input type="text" name="slug" placeholder="Slug of the role" value="{{ $role->slug }}"/>
                                 </label>
+                                <label>Priority of the role
+                                    <input type="text" name="priority" placeholder="Priority of the role" value="{{ $role->priority }}"/>
+                                </label>
                         </div>
                     </div>
                     <div class="row">

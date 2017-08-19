@@ -27,6 +27,7 @@ class RoleController extends Controller
         $validation = \Validator::make(Input::all(), [
             'name' => 'required',
             'slug'  => 'required',
+            'priority'  => 'required|integer',
         ]);
         if ($validation->fails())
             return \Redirect::to(\URL::previous())->withErrors($validation)->withInput();
@@ -37,6 +38,7 @@ class RoleController extends Controller
 
         $role->title = ucfirst(Input::get('name'));
         $role->slug = strtolower(Input::get('slug'));
+        $role->priority = Input::get('priority');
         $role->permissions()->sync($permissions);
         $role->save();
 

@@ -22,13 +22,19 @@
                     <div class="row">
                         <div class="large-12 columns">
                             @if($errors->has('name'))
-                                <label class="error">Name of the role
+                                <label>Name of the role
                                     <input type="text" name="name" placeholder="Name of the role" />
+                                </label>
+                                <label>Priority of the role
+                                    <input type="text" name="priority" placeholder="Priority of the role" />
                                 </label>
                                 <small class="error">{{ $errors->first('name') }}</small>
                             @else
                                 <label>Name of the role
                                     <input type="text" name="name" placeholder="Name of the role" />
+                                </label>
+                                <label>Priority of the role
+                                    <input type="text" name="priority" placeholder="Priority of the role" />
                                 </label>
                             @endif
                         </div>
