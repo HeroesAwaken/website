@@ -69,6 +69,9 @@
                     </a>
                 </li>
             </ul>
+            <p class="privacy">
+                <a href="{{ route('privacy') }}">Privacy and cookie policy</a>
+            </p>
         </div>
 
 

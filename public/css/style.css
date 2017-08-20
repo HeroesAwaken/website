@@ -6922,6 +6922,25 @@ footer.main-footer p {
     font-size: 0.8rem;
     color: rgba(255, 255, 255, 0.6);
 }
+
+footer.main-footer p.privacy a {
+    color: rgba(255, 255, 255, 0.6);
+}
+footer.main-footer p.privacy {
+    margin: 0;
+    vertical-align: middle;
+    padding-top: 0.6rem;
+    text-align: center;
+    color: rgba(255, 255, 255, 0.6);
+}
+@media screen and (min-width: 40em) {
+    /* line 365, ../scss/_app-styles.scss */
+    footer.main-footer p.privacy {
+        text-align: center;
+        color: rgba(255, 255, 255, 0.6);
+    }
+}
+
 /* line 365, ../scss/_app-styles.scss */
 footer.main-footer p.copyright {
     margin: 0;

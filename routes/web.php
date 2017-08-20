@@ -47,6 +47,11 @@ Route::get('news', [
     'uses' => 'HomeController@news'
 ]);
 
+Route::get('privacy', [
+    'as' => 'privacy',
+    'uses' => 'HomeController@privacy'
+]);
+
 Route::get('contact', [
     'as' => 'contact',
     'uses' => 'HomeController@contact'
