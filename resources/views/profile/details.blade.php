@@ -92,7 +92,7 @@
                             <h3>Description</h3>
                         </div>
                         <div class="content callout-secondary" style="margin-top: -8px; padding: 5px; color: #333; overflow: auto;">
-                            {!! $user->description != null ? $user->description : 'This soldier has no description yet!' !!}
+                            {{ $user->description != null ? $user->description : 'This soldier has no description yet!' }}
                         </div>
                     </div>
                 </div>
