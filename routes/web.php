@@ -27,8 +27,13 @@ Route::get('set-state/{state}', [
 ]);
 
 Route::get('download', [
-    'middleware' => 'auth',
     'as' => 'download',
+    'uses' => 'HomeController@download'
+]);
+
+Route::get('download/{client}', [
+    'middleware' => 'auth',
+    'as' => 'downloadclient',
     'uses' => 'HomeController@downloadClient'
 ]);
 

@@ -51,9 +51,28 @@ class HomeController extends Controller
         return redirect()->back();
     }
 
-    public function downloadClient()
+    public function download()
+    {
+        return view('download');
+    }
+
+    public function downloadClient(string $client)
     {
         Download::create(['user_id' => Auth::id()]);
+        switch($client) {
+            case "client":
+                return redirect()->away('https://dl.heroesawaken.com/setup.exe');
+                break;
+            case "client-archive":
+                return redirect()->away('https://dl.heroesawaken.com/client.zip');
+                break;
+            case "tutorial":
+                return redirect()->away('https://dl.heroesawaken.com/HeroesAwakenTutorial.zip');
+                break;
+            default:
+                return redirect()->away('https://dl.heroesawaken.com/HeroesAwakenTutorial.zip');
+                break;
+        }
         return redirect()->away('https://dl.heroesawaken.com/HeroesAwakenTutorial.zip');
     }
 
