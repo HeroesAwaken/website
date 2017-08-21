@@ -63,7 +63,8 @@
                     Maka
 
                     PS:
-                    I just allowed everyone to join the game, backend will probably die but play until revive network has their stuff up <a href="https://dl.heroesawaken.com/HeroesAwaken_test2.rar">Client</a>
+                    I just allowed everyone to join the game, backend will probably die but play until revive network has their stuff up<br>
+                    <a href="https://dl.heroesawaken.com/HeroesAwaken_test2.rar">Download Client</a>
                     </p>
                 </article>
             </div>
