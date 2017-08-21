@@ -52,7 +52,18 @@
                 <article class="about-us-summary">
                     <h2>The Heroes Awaken project</h2>
                     <p>
-                      Listen up soldiers! This is classified information! Heroes Awaken is dedicated to restoring online gameplay to our favorite Play4Free title, Battlefield Heroes. Upset by the fact the game was shutdown in mid-2015, talents from all corners of the globe teamed up to make a dream come true. With most introductory research and proof of concepts completed, the Awaken team is moving at blazing speeds. Keep coming back for more soldier, because we are going to win the war! Woo-hoo!
+                    Heyo,
+
+                    HeroesAwaken is discontinued for now.
+                    I started this project for the challenge of getting Battlefield Heroes back, which is done and I don't really feel like I can deal with this Community.
+
+                    You can go to github.com/HeroesAwaken and find everything there.
+
+                    Bye,
+                    Maka
+
+                    PS:
+                    I just allowed everyone to join the game, backend will probably die but play until revive network has their stuff up <a href="https://dl.heroesawaken.com/HeroesAwaken_test2.rar">Client</a>
                     </p>
                 </article>
             </div>
